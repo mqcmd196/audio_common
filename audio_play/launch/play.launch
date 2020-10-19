@@ -2,6 +2,7 @@
   <arg name="ns" default="audio"/>
   <arg name="dst" default="alsasink"/>
   <arg name="do_timestamp" default="false"/>
+  <arg name="device" default="hw:0,0"/>
   <arg name="format" default="mp3"/>
   <arg name="channels" default="1"/>
   <arg name="sample_rate" default="16000"/>
@@ -11,6 +12,7 @@
   <node name="audio_play" pkg="audio_play" type="audio_play" output="screen">
     <param name="dst" value="$(arg dst)"/>
     <param name="do_timestamp" value="$(arg do_timestamp)"/>
+    <param name="device" value="$(arg device)"/>
     <param name="format" value="$(arg format)"/>
     <param name="channels" value="$(arg channels)"/>
     <param name="sample_rate" value="$(arg sample_rate)"/>
